@@ -1,0 +1,54 @@
+{
+  "layoutId": "interlagos_full",
+  "layoutName": "Interlagos Full",
+  "mapName": "levels/smallisland",
+  "checkpoints": [
+    {
+      "id": 1,
+      "position": { "x": 10.0, "y": 0.0, "z": 0.0 },
+      "radius": 8.0,
+      "sectorIndex": 1
+    },
+    {
+      "id": 2,
+      "position": { "x": 120.0, "y": 15.0, "z": 0.0 },
+      "radius": 8.0,
+      "sectorIndex": 1
+    },
+    {
+      "id": 3,
+      "position": { "x": 240.0, "y": 30.0, "z": 0.0 },
+      "radius": 8.0,
+      "sectorIndex": 2
+    },
+    {
+      "id": 4,
+      "position": { "x": 340.0, "y": 80.0, "z": 0.0 },
+      "radius": 8.0,
+      "sectorIndex": 2
+    },
+    {
+      "id": 5,
+      "position": { "x": 460.0, "y": 120.0, "z": 0.0 },
+      "radius": 8.0,
+      "sectorIndex": 3
+    }
+  ],
+  "startGrid": [
+    {
+      "gridIndex": 1,
+      "position": { "x": 5.0, "y": -2.0, "z": 0.0 },
+      "rotation": 0
+    },
+    {
+      "gridIndex": 2,
+      "position": { "x": 2.0, "y": -2.0, "z": 0.0 },
+      "rotation": 0
+    },
+    {
+      "gridIndex": 3,
+      "position": { "x": -1.0, "y": -2.0, "z": 0.0 },
+      "rotation": 0
+    }
+  ]
+}
