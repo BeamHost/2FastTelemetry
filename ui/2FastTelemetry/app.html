@@ -1,0 +1,42 @@
+<!-- File: ui/2FastTelemetry/app.html -->
+<!DOCTYPE html>
+<html ng-app="fastTelemetry">
+<head>
+  <meta charset="utf-8">
+  <title>2Fast Telemetry HUD</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="HudCtrl as hud">
+  <div class="hud">
+    <div class="lap-bar">
+      <div>Lap: {{hud.lapCounter}}</div>
+      <div>Current: {{hud.formatMs(hud.lapTimeMs)}}</div>
+      <div>Best: {{hud.formatMs(hud.bestLapMs)}}</div>
+      <div class="delta" ng-class="{'pos': hud.deltaMs < 0, 'neg': hud.deltaMs >= 0}">
+        Δ {{hud.deltaMs && hud.formatMs(hud.deltaMs) || '--'}}
+      </div>
+    </div>
+
+    <div class="splits">
+      <div ng-repeat="split in hud.sectorSplits">Sector {{split.id}}: {{hud.formatMs(split.time)}}</div>
+    </div>
+
+    <div class="standings" ng-if="hud.standings.length > 0">
+      <div class="title">Race Standings</div>
+      <table>
+        <tr><th>P</th><th>Driver</th><th>Gap</th></tr>
+        <tr ng-repeat="row in hud.standings">
+          <td>{{row.pos}}</td><td>{{row.name}}</td><td>{{row.gap}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="lights" ng-if="hud.startLights > 0">
+      <div ng-repeat="n in [].constructor(5) track by $index" class="light" ng-class="{'on': $index < hud.startLights}"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

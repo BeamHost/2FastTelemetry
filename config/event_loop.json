@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "id": "event_1",
+      "name": "Interlagos Full GT3",
+      "layoutId": "interlagos_full",
+      "allowedCars": ["sbr4_gt3", "kseries_gt3"],
+      "laps": 10,
+      "minPlayers": 2,
+      "practiceDurationSec": 300,
+      "raceCooldownSec": 300
+    }
+  ]
+}

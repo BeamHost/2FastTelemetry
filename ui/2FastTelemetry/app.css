@@ -1,0 +1,14 @@
+/* File: ui/2FastTelemetry/app.css */
+body { font-family: Arial, sans-serif; color: #e8e8e8; background: transparent; }
+.hud { position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 4px; width: 320px; }
+.lap-bar { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px; }
+.delta { grid-column: span 2; }
+.delta.pos { color: #6bd26b; }
+.delta.neg { color: #f65f5f; }
+.splits { font-size: 12px; margin-bottom: 8px; }
+.standings { font-size: 12px; }
+.standings table { width: 100%; border-collapse: collapse; }
+.standings th, .standings td { border-bottom: 1px solid #555; padding: 2px; }
+.lights { display: flex; gap: 4px; margin-top: 8px; }
+.light { width: 16px; height: 16px; background: #333; border-radius: 50%; border: 1px solid #555; }
+.light.on { background: red; }
